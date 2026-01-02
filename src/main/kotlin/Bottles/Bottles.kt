@@ -5,11 +5,11 @@ class Bottles {
         TODO("Implement me!")
     }
 
-    fun verses(upper: Int, lower: Int) {
+    fun verses(upper: Int, lower: Int): String {
         TODO("Me, too!")
     }
 
-    fun song() {
+    fun song(): String {
         TODO("Don't forget about me!")
     }
 

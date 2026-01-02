@@ -1,6 +1,7 @@
 import Bottles.Bottles
-import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
+import strikt.api.expectThat
+import strikt.assertions.isEqualTo
 
 class BottlesTest {
     @Test
@@ -9,10 +10,9 @@ class BottlesTest {
             """
             99 bottles of beer on the wall, 99 bottles of beer.
             Take one down and pass it around, 98 bottles of beer on the wall.
-            
-            """.trimIndent()
+            """.trimIndent() + "\n"
 
-        Bottles().verse(99) shouldBe expected
+        expectThat(Bottles().verse(99)).isEqualTo(expected)
     }
 
     @Test
@@ -21,10 +21,9 @@ class BottlesTest {
             """
             3 bottles of beer on the wall, 3 bottles of beer.
             Take one down and pass it around, 2 bottles of beer on the wall.
-            
-            """.trimIndent();
+            """.trimIndent() + "\n"
 
-        Bottles().verse(3) shouldBe expected
+        expectThat(Bottles().verse(3)).isEqualTo(expected)
     }
 
     @Test
@@ -33,10 +32,9 @@ class BottlesTest {
             """
             2 bottles of beer on the wall, 2 bottles of beer.
             Take one down and pass it around, 1 bottle of beer on the wall.
-            
-            """.trimIndent();
+            """.trimIndent() + "\n"
 
-        Bottles().verse(2) shouldBe expected
+        expectThat(Bottles().verse(2)).isEqualTo(expected)
     }
 
     @Test
@@ -45,10 +43,9 @@ class BottlesTest {
             """
             1 bottle of beer on the wall, 1 bottle of beer.
             Take it down and pass it around, no more bottles of beer on the wall.
-            
-            """.trimIndent();
+            """.trimIndent() + "\n"
 
-        Bottles().verse(1) shouldBe expected
+        expectThat(Bottles().verse(1)).isEqualTo(expected)
     }
 
     @Test
@@ -56,10 +53,9 @@ class BottlesTest {
         val expected = """
             No more bottles of beer on the wall, no more bottles of beer.
             Go to the store and buy some more, 99 bottles of beer on the wall.
-            
-            """.trimIndent();
+            """.trimIndent() + "\n"
 
-        Bottles().verse(0) shouldBe expected
+        expectThat(Bottles().verse(0)).isEqualTo(expected)
     }
 
     @Test
@@ -71,10 +67,9 @@ class BottlesTest {
             
             98 bottles of beer on the wall, 98 bottles of beer.
             Take one down and pass it around, 97 bottles of beer on the wall.
-            
-            """.trimIndent();
+            """.trimIndent() + "\n"
 
-        Bottles().verses(99, 98) shouldBe expected
+        expectThat(Bottles().verses(99, 98)).isEqualTo(expected)
     }
 
     @Test
@@ -89,10 +84,9 @@ class BottlesTest {
             
             No more bottles of beer on the wall, no more bottles of beer.
             Go to the store and buy some more, 99 bottles of beer on the wall.
-            
-            """.trimIndent();
+            """.trimIndent() + "\n"
 
-        Bottles().verses(2, 0) shouldBe expected
+        expectThat(Bottles().verses(2, 0)).isEqualTo(expected)
     }
 
     @Test
@@ -398,8 +392,8 @@ class BottlesTest {
     
             No more bottles of beer on the wall, no more bottles of beer.
             Go to the store and buy some more, 99 bottles of beer on the wall.
-            """.trimIndent()
+            """.trimIndent() + "\n"
 
-        Bottles().song() shouldBe expected
+        expectThat(Bottles().song()).isEqualTo(expected)
     }
 }

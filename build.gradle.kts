@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-    testImplementation("io.kotest:kotest-assertions-core:6.0.7")
+    testImplementation("io.strikt:strikt-core:0.34.0")
 }
 
 kotlin {
