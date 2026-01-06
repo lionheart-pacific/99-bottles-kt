@@ -2,9 +2,10 @@ package Bottles
 
 class Bottles {
     fun verse(number: Int): String {
+        fun bott(bottles:Int) = if(bottles!=1) "bottles" else "bottle"
         return """
-            $number bottles of beer on the wall, $number bottles of beer.
-            Take one down and pass it around, ${number-1} ${if(number-1>1) "bottles" else "bottle"} of beer on the wall.
+            $number ${bott(number)} of beer on the wall, $number ${bott(number)} of beer.
+            Take ${if (number > 1) "one" else "it"} down and pass it around, ${if(number-1>0) number-1 else "no more"} ${bott(number-1)} of beer on the wall.
             """.trimIndent() + "\n\n"
     }
 
