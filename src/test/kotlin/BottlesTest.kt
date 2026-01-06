@@ -63,7 +63,7 @@ class BottlesTest {
         expectThat(Bottles().verse(0)).isEqualTo(expected)
     }
 
-    @Disabled
+//    @Disabled
     @Test
     fun `a couple verses`() {
         val expected =

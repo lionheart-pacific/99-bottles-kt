@@ -17,7 +17,11 @@ class Bottles {
     }
 
     fun verses(upper: Int, lower: Int): String {
-        TODO("Me, too!")
+        var s = ""
+        for (i in upper downTo lower) {
+            s+= verse(i)
+        }
+    return s
     }
 
     fun song(): String {
