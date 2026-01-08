@@ -6,14 +6,16 @@ class Bottles {
             ${firstLine(number)}
             ${secondLine(number)}
             """.trimIndent() + "\n\n"
-//        return """
-//            ${bottles(number)} of beer on the wall, ${bottles(number)} of beer.
-//            ${take(number)} down and pass it around, ${bottles(number - 1)} of beer on the wall.
-//            """.trimIndent() + "\n\n"
     }
 
     fun verses(upper: Int, lower: Int): String {
-        TODO("Me, too!")
+        var cur = upper
+        var result = ""
+        while (cur >= lower) {
+            result += verse(cur)
+            cur -= 1
+        }
+        return result
     }
 
     fun song(): String {
