@@ -19,7 +19,7 @@ class Bottles {
     }
 
     fun song(): String {
-        TODO("Don't forget about me!")
+        return verses(99, 0)
     }
 
     private fun firstLine(number: Int): String {
