@@ -16,7 +16,6 @@ class BottlesTest {
         expectThat(Bottles().verse(99)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `another verse`() {
         val expected =
@@ -28,7 +27,6 @@ class BottlesTest {
         expectThat(Bottles().verse(3)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `verse 2`() {
         val expected =
@@ -40,7 +38,6 @@ class BottlesTest {
         expectThat(Bottles().verse(2)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `verse 1`() {
         val expected =
@@ -52,7 +49,6 @@ class BottlesTest {
         expectThat(Bottles().verse(1)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `verse 0`() {
         val expected = """
