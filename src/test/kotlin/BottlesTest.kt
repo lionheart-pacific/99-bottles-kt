@@ -1,5 +1,4 @@
 import Bottles.Bottles
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import strikt.api.expectThat
 import strikt.assertions.isEqualTo
@@ -16,7 +15,6 @@ class BottlesTest {
         expectThat(Bottles().verse(99)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `another verse`() {
         val expected =
@@ -28,7 +26,6 @@ class BottlesTest {
         expectThat(Bottles().verse(3)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `verse 2`() {
         val expected =
@@ -40,7 +37,6 @@ class BottlesTest {
         expectThat(Bottles().verse(2)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `verse 1`() {
         val expected =
@@ -52,7 +48,6 @@ class BottlesTest {
         expectThat(Bottles().verse(1)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `verse 0`() {
         val expected = """
@@ -63,7 +58,6 @@ class BottlesTest {
         expectThat(Bottles().verse(0)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `a couple verses`() {
         val expected =
@@ -78,7 +72,6 @@ class BottlesTest {
         expectThat(Bottles().verses(99, 98)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `a few special verses`() {
         val expected =
@@ -96,7 +89,6 @@ class BottlesTest {
         expectThat(Bottles().verses(2, 0)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `the whole song`() {
         val expected =
