@@ -26,7 +26,7 @@ class Bottles {
     }
 
     fun verses(upper: Int, lower: Int): String {
-        return verse(99) + verse(98)
+        return (upper downTo lower).map { verse(it) }.joinToString("")
     }
 
     fun song(): String {
