@@ -26,7 +26,7 @@ class Bottles {
     }
 
     fun verses(upper: Int, lower: Int): String {
-        TODO("Me, too!")
+        return verse(99) + verse(98)
     }
 
     fun song(): String {
