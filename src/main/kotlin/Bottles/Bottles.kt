@@ -13,11 +13,6 @@ class Bottles {
                 Take it down and pass it around, no more bottles of beer on the wall.
                 """.trimIndent() + "\n\n"
 
-            2 -> """
-                ${number} bottles of beer on the wall, ${number} bottles of beer.
-                Take one down and pass it around, ${number - 1} ${container(number - 1)} of beer on the wall.
-                """.trimIndent() + "\n\n"
-
             else -> """
                 ${number} bottles of beer on the wall, ${number} bottles of beer.
                 Take one down and pass it around, ${number - 1} ${container(number - 1)} of beer on the wall.
