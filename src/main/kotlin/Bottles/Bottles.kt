@@ -34,7 +34,7 @@ class Bottles {
     }
 
     private fun container(): String {
-        return TODO("Provide the return value")
+        return "bottles"
     }
 
 }
