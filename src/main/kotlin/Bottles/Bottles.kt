@@ -20,7 +20,7 @@ class Bottles {
 
             else -> """
                 ${number} bottles of beer on the wall, ${number} bottles of beer.
-                Take one down and pass it around, ${number - 1} ${container()} of beer on the wall.
+                Take one down and pass it around, ${number - 1} ${container(number - 1)} of beer on the wall.
                 """.trimIndent() + "\n\n"
         }
     }
@@ -33,7 +33,7 @@ class Bottles {
         return verses(99, 0)
     }
 
-    private fun container(number: Int? = null): String {
+    private fun container(number: Int): String {
         if (number == 1) return "bottle"
         return "bottles"
     }
