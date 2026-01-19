@@ -33,7 +33,7 @@ class Bottles {
         return verses(99, 0)
     }
 
-    private fun container(): String {
+    private fun container(number: Int? = null): String {
         return "bottles"
     }
 
