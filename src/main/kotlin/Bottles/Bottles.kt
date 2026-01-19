@@ -34,6 +34,7 @@ class Bottles {
     }
 
     private fun container(number: Int? = null): String {
+        if (number == 1) return "bottle"
         return "bottles"
     }
 
