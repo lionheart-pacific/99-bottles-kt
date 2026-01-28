@@ -40,4 +40,8 @@ class Bottles {
 
     private fun capitalize(word: String): String = word.replaceFirstChar { it.uppercase() }
 
+    private fun action(number: Int): String {
+        if (number == 0) return "Go to the store and buy some more"
+        return """Take ${pronoun(number)} down and pass it around"""
+    }
 }
