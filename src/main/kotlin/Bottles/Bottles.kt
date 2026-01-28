@@ -4,7 +4,7 @@ class Bottles {
     fun verse(number: Int): String {
         return when (number) {
             0 -> """
-                ${capitalize(quantity(number))} bottles of beer on the wall, no more bottles of beer.
+                ${capitalize(quantity(number))} ${container(number)} of beer on the wall, no more bottles of beer.
                 Go to the store and buy some more, 99 bottles of beer on the wall.
                 """.trimIndent() + "\n\n"
 
