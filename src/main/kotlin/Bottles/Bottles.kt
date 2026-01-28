@@ -4,7 +4,7 @@ class Bottles {
     fun verse(number: Int): String {
         return when (number) {
             0 -> """
-                ${quantity(number).replaceFirstChar { it.uppercase() }} bottles of beer on the wall, no more bottles of beer.
+                ${capitalize(quantity(number))} bottles of beer on the wall, no more bottles of beer.
                 Go to the store and buy some more, 99 bottles of beer on the wall.
                 """.trimIndent() + "\n\n"
 
@@ -37,4 +37,7 @@ class Bottles {
         if (number == 0) return "no more"
         return number.toString()
     }
+
+    private fun capitalize(word: String): String = word.replaceFirstChar { it.uppercase() }
+
 }
