@@ -44,4 +44,6 @@ class Bottles {
         if (number == 0) return "Go to the store and buy some more"
         return """Take ${pronoun(number)} down and pass it around"""
     }
+
+    private fun successor(number: Int) = (number - 1)
 }
