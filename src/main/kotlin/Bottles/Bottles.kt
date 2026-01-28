@@ -5,12 +5,12 @@ class Bottles {
         return when (number) {
             0 -> """
                 ${capitalize(quantity(number))} ${container(number)} of beer on the wall, ${quantity(number)} ${container(number)} of beer.
-                Go to the store and buy some more, 99 bottles of beer on the wall.
+                ${action(number)}, 99 bottles of beer on the wall.
                 """.trimIndent() + "\n\n"
 
             else -> """
                 ${capitalize(quantity(number))} ${container(number)} of beer on the wall, ${quantity(number)} ${container(number)} of beer.
-                Take ${pronoun(number)} down and pass it around, ${quantity(number - 1)} ${container(number - 1)} of beer on the wall.
+                ${action(number)}, ${quantity(number - 1)} ${container(number - 1)} of beer on the wall.
                 """.trimIndent() + "\n\n"
         }
     }
