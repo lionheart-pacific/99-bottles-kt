@@ -34,6 +34,7 @@ class Bottles {
     }
 
     private fun pronoun(number: Int? = null): String {
+        if (number == 1) return "it"
         return "one"
     }
 }
