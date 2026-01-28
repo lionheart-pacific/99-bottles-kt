@@ -5,12 +5,12 @@ class Bottles {
         return when (number) {
             0 -> """
                 ${capitalize(quantity(number))} ${container(number)} of beer on the wall, ${quantity(number)} ${container(number)} of beer.
-                ${action(number)}, ${quantity(successor(number))} ${container(number - 1)} of beer on the wall.
+                ${action(number)}, ${quantity(successor(number))} ${container(successor(number))} of beer on the wall.
                 """.trimIndent() + "\n\n"
 
             else -> """
                 ${capitalize(quantity(number))} ${container(number)} of beer on the wall, ${quantity(number)} ${container(number)} of beer.
-                ${action(number)}, ${quantity(successor(number))} ${container(number - 1)} of beer on the wall.
+                ${action(number)}, ${quantity(successor(number))} ${container(successor(number))} of beer on the wall.
                 """.trimIndent() + "\n\n"
         }
     }
