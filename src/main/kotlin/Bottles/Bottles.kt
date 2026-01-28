@@ -10,7 +10,7 @@ class Bottles {
 
             1 -> """
                 ${number} ${container(number)} of beer on the wall, ${number} ${container(number)} of beer.
-                Take ${pronoun(number)} down and pass it around, no more bottles of beer on the wall.
+                Take ${pronoun(number)} down and pass it around, ${quantity()} bottles of beer on the wall.
                 """.trimIndent() + "\n\n"
 
             else -> """
@@ -38,7 +38,7 @@ class Bottles {
         return "one"
     }
 
-    private fun quantity(): String {
+    private fun quantity(number: Int? = null): String {
         return "no more"
     }
 }
