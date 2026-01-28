@@ -33,7 +33,7 @@ class Bottles {
         return "bottles"
     }
 
-    private fun pronoun(): String {
+    private fun pronoun(number: Int? = null): String {
         return "one"
     }
 }
