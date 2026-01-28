@@ -39,7 +39,6 @@ class Bottles {
     }
 
     private fun quantity(number: Int? = null): String {
-        if (number == 0) return "no more"
-        return number.toString()
+        return "no more"
     }
 }
