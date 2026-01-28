@@ -38,5 +38,7 @@ class Bottles {
         return "one"
     }
 
-    private fun quantity() {}
+    private fun quantity(): String {
+        return "no more"
+    }
 }
