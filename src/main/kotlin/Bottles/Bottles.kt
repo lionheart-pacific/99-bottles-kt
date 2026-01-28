@@ -10,7 +10,7 @@ class Bottles {
 
             else -> """
                 ${capitalize(quantity(number))} ${container(number)} of beer on the wall, ${quantity(number)} ${container(number)} of beer.
-                ${action(number)}, ${quantity(number - 1)} ${container(number - 1)} of beer on the wall.
+                ${action(number)}, ${quantity(successor(number))} ${container(number - 1)} of beer on the wall.
                 """.trimIndent() + "\n\n"
         }
     }
@@ -45,5 +45,8 @@ class Bottles {
         return """Take ${pronoun(number)} down and pass it around"""
     }
 
-    private fun successor(number: Int) = (number - 1)
+    private fun successor(number: Int): Int {
+        if (number == 0) return 99
+        return (number - 1)
+    }
 }
