@@ -9,7 +9,7 @@ class Bottles {
                 """.trimIndent() + "\n\n"
 
             else -> """
-                ${number} ${container(number)} of beer on the wall, ${number} ${container(number)} of beer.
+                ${capitalize(quantity(number))} ${container(number)} of beer on the wall, ${number} ${container(number)} of beer.
                 Take ${pronoun(number)} down and pass it around, ${quantity(number - 1)} ${container(number - 1)} of beer on the wall.
                 """.trimIndent() + "\n\n"
         }
