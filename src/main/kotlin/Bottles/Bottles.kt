@@ -37,4 +37,6 @@ class Bottles {
         if (number == 1) return "it"
         return "one"
     }
+
+    private fun quantity() {}
 }
