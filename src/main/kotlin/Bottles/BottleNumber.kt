@@ -22,8 +22,8 @@ class BottleNumber(val number: Int) {
         return "one"
     }
 
-    fun successor(number: Int): Int {
+    fun successor(): Int {
         if (number == 0) return 99
-        return (number - 1)
+        return number - 1
     }
 }

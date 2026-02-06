@@ -29,6 +29,6 @@ class Bottles {
     }
 
     private fun successor(number: Int): Int {
-        return BottleNumber(number).successor(number)
+        return BottleNumber(number).successor()
     }
 }
