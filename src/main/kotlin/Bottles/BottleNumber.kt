@@ -1,0 +1,5 @@
+package Bottles
+
+class BottleNumber {
+
+}
