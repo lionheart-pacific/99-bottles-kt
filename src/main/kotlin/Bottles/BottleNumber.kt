@@ -3,8 +3,8 @@ package Bottles
 class BottleNumber(val number: Int) {
 
     fun quantity(): String {
-        if (this.number == 0) return "no more"
-        return this.number.toString()
+        if (number == 0) return "no more"
+        return number.toString()
     }
 
     fun container(number: Int): String {
