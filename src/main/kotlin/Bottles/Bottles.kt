@@ -1,10 +1,18 @@
 package Bottles
 
 class Bottles {
-    fun verse(number: Int): String = """
-            ${capitalize(quantity(number))} ${container(number)} of beer on the wall, ${quantity(number)} ${container(number)} of beer.
-            ${action(number)}, ${quantity(successor(number))} ${container(successor(number))} of beer on the wall.
-            """.trimIndent() + "\n\n"
+    fun verse(number: Int): String {
+        val bottleNumber = BottleNumber(number);
+
+        return """
+                ${capitalize(quantity(number))} ${container(number)} of beer on the wall, ${quantity(number)} ${
+            container(
+                number
+            )
+        } of beer.
+                ${action(number)}, ${quantity(successor(number))} ${container(successor(number))} of beer on the wall.
+                """.trimIndent() + "\n\n"
+    }
 
     fun verses(upper: Int, lower: Int): String {
         return (upper downTo lower).map { verse(it) }.joinToString("")
