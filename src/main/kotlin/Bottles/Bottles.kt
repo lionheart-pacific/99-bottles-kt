@@ -25,7 +25,7 @@ class Bottles {
     private fun capitalize(word: String): String = word.replaceFirstChar { it.uppercase() }
 
     private fun action(number: Int): String {
-        return BottleNumber(number).action(number)
+        return BottleNumber(number).action()
     }
 
     private fun successor(number: Int): Int {
