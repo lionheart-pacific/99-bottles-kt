@@ -7,8 +7,8 @@ class BottleNumber(val number: Int) {
         return number.toString()
     }
 
-    fun container(number: Int? = null): String {
-        if (this.number == 1) return "bottle"
+    fun container(): String {
+        if (number == 1) return "bottle"
         return "bottles"
     }
 
