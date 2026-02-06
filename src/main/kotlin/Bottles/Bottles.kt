@@ -21,21 +21,6 @@ class Bottles {
         return verses(99, 0)
     }
 
-    private fun container(number: Int): String {
-        return BottleNumber(number).container()
-    }
-
-    private fun quantity(number: Int): String {
-        return BottleNumber(number).quantity()
-    }
-
     private fun capitalize(word: String): String = word.replaceFirstChar { it.uppercase() }
 
-    private fun action(number: Int): String {
-        return BottleNumber(number).action()
-    }
-
-    private fun successor(number: Int): Int {
-        return BottleNumber(number).successor()
-    }
 }
