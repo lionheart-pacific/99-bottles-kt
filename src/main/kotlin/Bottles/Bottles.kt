@@ -15,8 +15,7 @@ class Bottles {
     }
 
     private fun container(number: Int): String {
-        if (number == 1) return "bottle"
-        return "bottles"
+        return BottleNumber(number).container(number)
     }
 
     private fun pronoun(number: Int): String {
