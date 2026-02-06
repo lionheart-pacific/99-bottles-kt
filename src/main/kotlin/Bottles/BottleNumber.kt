@@ -12,8 +12,8 @@ class BottleNumber(val number: Int) {
         return "bottles"
     }
 
-    fun action(number: Int? = null): String {
-        if (this.number == 0) return "Go to the store and buy some more"
+    fun action(): String {
+        if (number == 0) return "Go to the store and buy some more"
         return """Take ${pronoun()} down and pass it around"""
     }
 
