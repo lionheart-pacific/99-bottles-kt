@@ -26,8 +26,6 @@ class Bottles {
 
     private fun quantity(number: Int): String {
         return BottleNumber(number).quantity(number)
-        if (number == 0) return "no more"
-        return number.toString()
     }
 
     private fun capitalize(word: String): String = word.replaceFirstChar { it.uppercase() }
