@@ -2,7 +2,7 @@ package Bottles
 
 class BottleNumber(val number: Int) {
 
-    private fun quantity(number: Int): String {
+    fun quantity(number: Int): String {
         if (number == 0) return "no more"
         return number.toString()
     }
