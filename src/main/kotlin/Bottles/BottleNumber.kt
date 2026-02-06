@@ -12,17 +12,17 @@ class BottleNumber(val number: Int) {
         return "bottles"
     }
 
-    private fun action(number: Int): String {
+    fun action(number: Int): String {
         if (number == 0) return "Go to the store and buy some more"
         return """Take ${pronoun(number)} down and pass it around"""
     }
 
-    private fun pronoun(number: Int): String {
+    fun pronoun(number: Int): String {
         if (number == 1) return "it"
         return "one"
     }
 
-    private fun successor(number: Int): Int {
+    fun successor(number: Int): Int {
         if (number == 0) return 99
         return (number - 1)
     }
