@@ -23,7 +23,7 @@ class Bottles {
     }
 
     private fun quantity(number: Int): String {
-        return BottleNumber(number).quantity(number)
+        return BottleNumber(number).quantity()
     }
 
     private fun capitalize(word: String): String = word.replaceFirstChar { it.uppercase() }
