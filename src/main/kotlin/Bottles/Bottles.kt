@@ -2,13 +2,11 @@ package Bottles
 
 class Bottles {
     fun verse(number: Int): String {
-        val bottleNumber = BottleNumber(number);
+        val bottleNumber = BottleNumber(number)
 
         return """
-                ${capitalize(quantity(number))} ${container(number)} of beer on the wall, ${quantity(number)} ${
-            container(
-                number
-            )
+                ${capitalize(bottleNumber.quantity())} ${bottleNumber.container()} of beer on the wall, ${bottleNumber.quantity()} ${
+            bottleNumber.container()
         } of beer.
                 ${bottleNumber.action()}, ${quantity(successor(number))} ${container(successor(number))} of beer on the wall.
                 """.trimIndent() + "\n\n"
