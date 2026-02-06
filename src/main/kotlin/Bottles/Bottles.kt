@@ -15,7 +15,7 @@ class Bottles {
     }
 
     private fun container(number: Int): String {
-        return BottleNumber(number).container(number)
+        return BottleNumber(number).container()
     }
 
     private fun quantity(number: Int): String {
