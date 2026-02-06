@@ -10,7 +10,7 @@ class Bottles {
                 number
             )
         } of beer.
-                ${action(number)}, ${quantity(successor(number))} ${container(successor(number))} of beer on the wall.
+                ${bottleNumber.action()}, ${quantity(successor(number))} ${container(successor(number))} of beer on the wall.
                 """.trimIndent() + "\n\n"
     }
 
