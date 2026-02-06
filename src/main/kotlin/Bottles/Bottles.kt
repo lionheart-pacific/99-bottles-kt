@@ -19,7 +19,7 @@ class Bottles {
     }
 
     private fun pronoun(number: Int): String {
-        return BottleNumber(number).pronoun(number)
+        return BottleNumber(number).pronoun()
     }
 
     private fun quantity(number: Int): String {

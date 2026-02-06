@@ -17,8 +17,8 @@ class BottleNumber(val number: Int) {
         return """Take ${pronoun(number)} down and pass it around"""
     }
 
-    fun pronoun(number: Int): String {
-        if (number == 1) return "it"
+    fun pronoun(number: Int? = null): String {
+        if (this.number == 1) return "it"
         return "one"
     }
 
