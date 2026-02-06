@@ -14,10 +14,10 @@ class BottleNumber(val number: Int) {
 
     fun action(number: Int): String {
         if (number == 0) return "Go to the store and buy some more"
-        return """Take ${pronoun(number)} down and pass it around"""
+        return """Take ${pronoun()} down and pass it around"""
     }
 
-    fun pronoun(number: Int? = null): String {
+    fun pronoun(): String {
         if (this.number == 1) return "it"
         return "one"
     }
