@@ -18,10 +18,6 @@ class Bottles {
         return BottleNumber(number).container(number)
     }
 
-    private fun pronoun(number: Int): String {
-        return BottleNumber(number).pronoun()
-    }
-
     private fun quantity(number: Int): String {
         return BottleNumber(number).quantity()
     }
