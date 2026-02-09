@@ -61,7 +61,6 @@ class ReminderServiceTest {
         expectThat(ReminderService().getTwoStepVerificationReminderMessage(userCreatedTime, jobExecutionTime)).isEqualTo(expected)
     }
 
-    @Disabled
     @Test
     fun `reports account locked when seven full days have elapsed since user creation (created during quiet period)`() {
         val userCreatedTime = Instant.parse("2026-02-14T06:00:00Z")
