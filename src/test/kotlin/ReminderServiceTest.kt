@@ -24,7 +24,6 @@ class ReminderServiceTest {
         expectThat(ReminderService().getTwoStepVerificationReminderMessage(userCreatedTime, jobExecutionTime)).isEqualTo(expectedReminder)
     }
 
-    @Disabled
     @Test
     fun `reports 5 days remaining when user one full day has elapsed since user creation (created during quiet period)`() {
         val userCreatedTime = Instant.parse("2026-02-14T06:00:00Z")
