@@ -1,5 +1,6 @@
 package ReminderService
 
+import kotlin.time.Duration.Companion.days
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Instant
 
@@ -10,9 +11,9 @@ class ReminderService {
         val reportedDaysRemaining = 6 - wholeDaysSinceUserCreated
         return when {
             durationSinceUserCreated < 8.hours -> null
-            wholeDaysSinceUserCreated == 5 -> "For security, you have $reportedDaysRemaining day remaining in your setup window"
-            wholeDaysSinceUserCreated < 7 -> "For security, you have $reportedDaysRemaining days remaining in your setup window"
-            wholeDaysSinceUserCreated == 7 -> "For security, your account has been locked because your 7-day setup window has expired"
+            reportedDaysRemaining > 1 -> "For security, you have $reportedDaysRemaining days remaining in your setup window"
+            reportedDaysRemaining == 1 -> "For security, you have 1 day remaining in your setup window"
+            durationSinceUserCreated < 8.days -> "For security, your account has been locked because your 7-day setup window has expired"
             else -> null
         }
     }
