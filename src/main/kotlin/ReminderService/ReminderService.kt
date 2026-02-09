@@ -9,7 +9,7 @@ class ReminderService {
         val wholeDaysSinceUserCreated = durationSinceUserCreated.inWholeDays.toInt()
         val reportedDaysRemaining = 6 - wholeDaysSinceUserCreated
         if (durationSinceUserCreated < 8.hours) return null
-        if (reportedDaysRemaining == 5) return "For security, you have 5 days remaining in your setup window"
-        return "For security, you have 6 days remaining in your setup window"
+        if (reportedDaysRemaining == 5) return "For security, you have $reportedDaysRemaining days remaining in your setup window"
+        return "For security, you have $reportedDaysRemaining days remaining in your setup window"
     }
 }
