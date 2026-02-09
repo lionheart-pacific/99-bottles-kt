@@ -6,17 +6,17 @@ import kotlin.time.Instant
 
 class ReminderService {
     fun getTwoStepVerificationReminderMessage(userCreatedTime: Instant, jobExecutionTime: Instant): String? {
-        val dif = jobExecutionTime.minus(userCreatedTime)
-        if(dif > 8.days){
-            return null
-        }
-        else if(dif > 8.hours) {
-            val remainingDays = 6 - dif.inWholeDays
-            if (remainingDays <= 0.toLong()) {
-                return "For security, your account has been locked because your 7-day setup window has expired"
+        val createdTime = jobExecutionTime.minus(userCreatedTime)
+        val quietPeriod = 8.hours
+        val reminderPeriod = 8.days
+
+        if(createdTime > quietPeriod && createdTime < reminderPeriod) {
+            val remainingDays = 6 - createdTime.inWholeDays
+            if (remainingDays >= 1.toLong()) {
+                val days = if (remainingDays == 1.toLong()) "day" else "days"
+                return "For security, you have $remainingDays $days remaining in your setup window"
             }
-            val days = if (remainingDays == 1.toLong()) "day" else "days"
-            return "For security, you have $remainingDays $days remaining in your setup window"
+            return "For security, your account has been locked because your 7-day setup window has expired"
         }
         return null
     }
