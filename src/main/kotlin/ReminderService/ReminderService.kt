@@ -8,7 +8,8 @@ class ReminderService {
         val dif = jobExecutionTime.minus(userCreatedTime)
         if(dif > 8.hours) {
             val remainingDays = 6 - dif.inWholeDays
-            return "For security, you have $remainingDays days remaining in your setup window"
+            val days = if (remainingDays == 1.toLong()) "day" else "days"
+            return "For security, you have $remainingDays $days remaining in your setup window"
         }
         return null
     }
