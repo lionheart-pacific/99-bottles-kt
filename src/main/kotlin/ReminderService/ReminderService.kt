@@ -24,7 +24,6 @@ class ReminderService {
 
     private fun remainingDays(hoursElapsed: Duration) : Int{
         val hours = hoursElapsed.toInt(DurationUnit.HOURS)
-        println("Hours: $hours")
         return 6 - hours / 24
     }
 }
