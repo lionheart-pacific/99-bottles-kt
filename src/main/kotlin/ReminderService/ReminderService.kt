@@ -7,7 +7,8 @@ class ReminderService {
     fun getTwoStepVerificationReminderMessage(userCreatedTime: Instant, jobExecutionTime: Instant): String? {
         val dif = jobExecutionTime.minus(userCreatedTime)
         if(dif > 8.hours) {
-            return "For security, you have 6 days remaining in your setup window"
+            val remainingDays = 6 - dif.inWholeDays
+            return "For security, you have $remainingDays days remaining in your setup window"
         }
         return null
     }
